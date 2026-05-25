@@ -18,11 +18,17 @@ DeckX is an AI-native HTML presentation format and player. It lets humans or LLM
 
 ## Documentation
 
-- [DeckX Package spec](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/DECKX_PACKAGE.md): Package folder structure, manifest fields, slide contract, notes contract, and validation requirements.
-- [Agent Deck Authoring Guide](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/AGENT_DECK_AUTHORING.md): How humans and LLM agents should author DeckX source folders.
-- [DeckX Manifest Schema](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/deckx-manifest.schema.json): JSON Schema draft for `manifest.json`.
-- [Packaging Strategy](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/PACKAGING_STRATEGY.md): Online player and offline package direction.
-- [MCP Strategy](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/MCP_STRATEGY.md): Current MCP prototype and review notes.
+- [Full LLM context](https://deckx-project.github.io/llms-full.txt): Longer machine-readable summary, public documentation links, and recommended agent workflow.
+- [DeckX Package spec](https://deckx-project.github.io/docs/deckx-package.md): Package folder structure, manifest fields, slide contract, notes contract, and validation requirements.
+- [Agent Deck Authoring Guide](https://deckx-project.github.io/docs/agent-deck-authoring.md): How humans and LLM agents should author DeckX source folders.
+- [DeckX Manifest Schema](https://deckx-project.github.io/docs/deckx-manifest.schema.json): JSON Schema draft for `manifest.json`.
+- [Packaging Strategy](https://deckx-project.github.io/docs/packaging-strategy.md): Online player and offline package direction.
+- [MCP Strategy](https://deckx-project.github.io/docs/mcp-strategy.md): MCP and skill options under review, not yet a committed public product feature.
+
+## Discovery Files
+
+- [Robots policy](https://deckx-project.github.io/robots.txt): Crawler access policy and sitemap pointer.
+- [Sitemap](https://deckx-project.github.io/sitemap.xml): Canonical public URLs for landing, player, LLM context, and public docs.
 
 ## Official Sample Decks
 

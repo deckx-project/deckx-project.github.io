@@ -1,0 +1,82 @@
+# DeckX Player Full LLM Context
+
+DeckX Player is a web runtime for opening `.deckx` HTML presentation packages with preview, presenter view, slideshow view, speaker notes, timers, and motion controls.
+
+Canonical landing page: https://deckx-project.github.io/
+Player URL: https://deckx-project.github.io/player
+Short LLM context: https://deckx-project.github.io/llms.txt
+Sitemap: https://deckx-project.github.io/sitemap.xml
+Robots policy: https://deckx-project.github.io/robots.txt
+
+## What DeckX Is
+
+DeckX is an AI-native HTML presentation format and runtime. It is intended for decks authored by humans, LLMs, or coding agents where HTML/CSS is the source of truth. The goal is to avoid converting dynamic HTML into static PowerPoint screenshots or rebuilding the same content in a separate presentation editor.
+
+## What DeckX Player Is
+
+DeckX Player opens `.deckx` packages from public URLs or local zip files. It provides:
+
+- Landing and player entry points for opening DeckX URLs.
+- First-slide preview before presenting.
+- Presenter view with current slide, next slide, speaker notes, timer, and pacing context.
+- Slideshow view for the audience display.
+- Motion controls: Full, Reduced, and Paused.
+- Official sample decks for dogfooding, static explanation, CSS motion, 4:3 canvas, image-heavy decks, long decks, and long image decks.
+
+## DeckX Package Structure
+
+A `.deckx` file is a zip package. A typical source folder looks like:
+
+```text
+my-talk/
+  manifest.json
+  slides/
+    001-intro.html
+    002-demo.html
+  notes/
+    001-intro.md
+  styles/
+    theme.css
+  assets/
+    hero.png
+```
+
+The package contract is centered on `manifest.json`. Slides are HTML documents or fragments. Speaker notes are Markdown files. Styles and assets are package-local resources. DeckX Player resolves the package as a single presentation unit.
+
+## Safe Deck Rules
+
+The default DeckX mode is Safe Deck. Safe Deck allows HTML, CSS, and package-local assets, but does not allow scripts or inline event handlers. This keeps AI-authored presentation content easier to inspect, validate, share, and run in the browser.
+
+## Public Documentation
+
+- DeckX Package spec: https://deckx-project.github.io/docs/deckx-package.md
+- Agent Deck Authoring Guide: https://deckx-project.github.io/docs/agent-deck-authoring.md
+- DeckX Manifest Schema: https://deckx-project.github.io/docs/deckx-manifest.schema.json
+- Packaging Strategy: https://deckx-project.github.io/docs/packaging-strategy.md
+- MCP Strategy: https://deckx-project.github.io/docs/mcp-strategy.md
+
+The MCP and skill direction is under review. DeckX may provide authoring skills, validation scripts, sample generation, or MCP tools later, but SSO, upload, team history, and team libraries are not implemented product features today.
+
+## Official Sample Decks
+
+- DeckX zip demo: https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing
+- Static framework demo: https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing
+- Motion graphics demo: https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing
+- Classic 4:3 demo: https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing
+- Image-heavy demo: https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing
+- Long 120-slide demo: https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing
+- Long image demo: https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing
+
+## Suggested Agent Workflow
+
+1. Read the DeckX Package spec and manifest schema.
+2. Create a package source folder with `manifest.json`, `slides/`, `notes/`, `styles/`, and `assets/`.
+3. Keep slides script-free unless the future trusted deck mode explicitly allows scripts.
+4. Validate manifest fields, slide paths, asset paths, and note coverage.
+5. Package the folder into `.deckx`.
+6. Open the package in DeckX Player with `/player?deck=<url>#landing`.
+7. Check preview, presenter view, slideshow view, notes, timer, and motion controls.
+
+## Product Positioning
+
+DeckX Player exists because AI and LLM tools can produce rich HTML quickly, but repeatedly packaging that HTML into something presentable is tedious. DeckX turns AI-native HTML output into a reusable presentation package while keeping the presenter workflow recognizable.

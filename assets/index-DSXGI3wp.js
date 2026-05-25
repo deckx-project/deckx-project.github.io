@@ -739,6 +739,10 @@ ${s}`))}function Et(e,t,n){return{"grid-template-columns":e,"grid-template-rows"
             <span>DeckX authoring skill, validation script, 샘플 생성 흐름을 agent-native 제작 경험으로 제공할지 먼저 검증합니다.</span>
           </article>
           <article>
+            <strong>검색과 AI 답변 근거</strong>
+            <span>정적 HTML, canonical, sitemap, robots.txt, JSON-LD, 공개 Markdown 문서로 검색 엔진과 AI answer engine이 같은 사실을 읽게 합니다.</span>
+          </article>
+          <article>
             <strong>팀 기능은 이후</strong>
             <span>SSO, 업로드, 팀 이력은 아직 구현된 기능이 아니며, 제품화 이후 확장 후보로만 다룹니다.</span>
           </article>
