@@ -1,0 +1,16 @@
+{
+  "name": "DeckX Player",
+  "short_name": "DeckX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/brand/deckx-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
