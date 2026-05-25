@@ -47,6 +47,8 @@ English is the canonical discovery language for DeckX. Korean equivalents are pu
 
 ## Official Sample Decks
 
+- [DeckX starter repo](https://github.com/deckx-project/deckx-starter-basic): Public starter repository with README, AGENTS.md, validation scripts, and a minimal DeckX source folder.
+- [DeckX starter demo](https://deckx-project.github.io/player?deck=/decks/starter-basic.deckx#landing): Packaged preview of the starter deck.
 - [DeckX zip demo](https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing): Dogfooding deck explaining DeckX Player itself.
 - [Static framework demo](https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing): Text-focused DeckX runtime explanation.
 - [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing): CSS animation demo with Full, Reduced, and Paused motion modes.
