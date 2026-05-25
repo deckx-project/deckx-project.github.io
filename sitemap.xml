@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
   <url>
     <loc>https://deckx-project.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://deckx-project.github.io/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/" />
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://deckx-project.github.io/player</loc>
@@ -14,36 +29,68 @@
   </url>
   <url>
     <loc>https://deckx-project.github.io/llms.txt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/llms.txt" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/llms.txt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/llms.txt" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://deckx-project.github.io/llms-full.txt</loc>
+    <loc>https://deckx-project.github.io/ko/llms.txt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/llms.txt" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/llms.txt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/llms.txt" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://deckx-project.github.io/llms-full.txt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/llms-full.txt" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/llms-full.txt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/llms-full.txt" />
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://deckx-project.github.io/ko/llms-full.txt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/llms-full.txt" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/llms-full.txt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/llms-full.txt" />
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://deckx-project.github.io/docs/deckx-package.md</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/docs/deckx-package.md" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/docs/deckx-package.md" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://deckx-project.github.io/docs/agent-deck-authoring.md</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/docs/agent-deck-authoring.md" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/docs/agent-deck-authoring.md" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://deckx-project.github.io/docs/packaging-strategy.md</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/docs/packaging-strategy.md" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/docs/packaging-strategy.md" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://deckx-project.github.io/docs/mcp-strategy.md</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/docs/mcp-strategy.md" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/docs/mcp-strategy.md" />
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/deckx-manifest.schema.json",
+  "title": "DeckX Package Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "id", "title", "aspectRatio", "slides"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "deckx.deck.v1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}[a-z0-9]$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aspectRatio": {
+      "oneOf": [
+        { "const": "16:9" },
+        { "const": "4:3" },
+        {
+          "type": "object",
+          "required": ["width", "height"],
+          "additionalProperties": false,
+          "properties": {
+            "width": { "type": "integer", "minimum": 1 },
+            "height": { "type": "integer", "minimum": 1 }
+          }
+        }
+      ]
+    },
+    "durationSec": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "theme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "css": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*\\.\\./).+\\.css$"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "language": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "thumbnail": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*\\.\\./).+\\.(svg|png|jpg|jpeg|webp)$"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "generator": {
+          "type": "object",
+          "required": ["name"],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "custom": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,62}[a-z0-9]$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*\\.\\./).+\\.html$"
+          },
+          "notes": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*\\.\\./).+\\.md$"
+          },
+          "timingSec": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "className": {
+            "type": "string"
+          },
+          "footer": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

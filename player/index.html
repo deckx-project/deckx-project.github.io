@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,28 +7,33 @@
     <meta name="googlebot" content="index,follow,max-image-preview:large" />
     <meta
       name="description"
-      content="DeckX Player는 AI와 LLM agent가 만든 HTML 발표를 PPT로 변환하지 않고 .deckx 패키지로 열어 미리보기, 발표자뷰, 슬라이드쇼, 발표자 노트, 모션 제어를 제공하는 웹 기반 발표 런타임입니다."
+      content="DeckX Player is an AI-native HTML presentation runtime that opens .deckx packages with preview, presenter view, slideshow view, speaker notes, and motion controls without converting HTML to PowerPoint."
     />
     <meta
       name="keywords"
-      content="DeckX, DeckX Player, AI presentation, HTML presentation, .deckx, PPT alternative, LLM agent, presenter view, slideshow runtime, Generative Engine Optimization"
+      content="DeckX, DeckX Player, AI presentation, HTML presentation, .deckx, PowerPoint alternative, LLM agent, presenter view, slideshow runtime, Generative Engine Optimization"
     />
     <meta name="application-name" content="DeckX Player" />
     <meta name="author" content="DeckX Project" />
     <meta name="creator" content="DeckX Project" />
     <meta name="publisher" content="DeckX Project" />
     <link rel="canonical" href="https://deckx-project.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://deckx-project.github.io/" />
+    <link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/" />
+    <link rel="alternate" hreflang="x-default" href="https://deckx-project.github.io/" />
     <link rel="alternate" type="text/plain" href="https://deckx-project.github.io/llms.txt" title="DeckX llms.txt" />
     <link rel="alternate" type="text/plain" href="https://deckx-project.github.io/llms-full.txt" title="DeckX full LLM context" />
+    <link rel="alternate" type="text/plain" href="https://deckx-project.github.io/ko/llms.txt" title="DeckX Korean llms.txt" />
     <meta property="og:title" content="DeckX Player - AI-native HTML presentation runtime" />
     <meta
       property="og:description"
-      content="AI가 만든 HTML 발표를 PPT로 변환하지 않고 .deckx 패키지로 열어 발표자뷰, 슬라이드쇼, 모션 제어로 바로 발표하세요."
+      content="Present AI-generated HTML as .deckx packages with presenter view, slideshow view, speaker notes, and motion controls."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://deckx-project.github.io/" />
     <meta property="og:site_name" content="DeckX Player" />
-    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ko_KR" />
     <meta property="og:image" content="https://deckx-project.github.io/brand/deckx-icon.png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
@@ -37,7 +42,7 @@
     <meta name="twitter:title" content="DeckX Player - AI-native HTML presentation runtime" />
     <meta
       name="twitter:description"
-      content="AI가 만든 HTML 발표를 .deckx 패키지로 열어 미리보기, 발표자뷰, 슬라이드쇼, 모션 제어로 바로 발표하세요."
+      content="Open AI-generated HTML presentations as .deckx packages with preview, presenter view, slideshow view, and motion controls."
     />
     <meta name="twitter:image" content="https://deckx-project.github.io/brand/deckx-icon.png" />
     <meta name="theme-color" content="#f97316" />
@@ -72,7 +77,7 @@
             "@id": "https://deckx-project.github.io/#website",
             "url": "https://deckx-project.github.io/",
             "name": "DeckX Player",
-            "inLanguage": "ko-KR",
+            "inLanguage": "en",
             "publisher": {
               "@id": "https://deckx-project.github.io/#organization"
             },
@@ -89,8 +94,8 @@
             "about": {
               "@id": "https://deckx-project.github.io/#software"
             },
-            "inLanguage": "ko-KR",
-            "description": "DeckX Player는 AI와 LLM agent가 만든 HTML 발표를 .deckx 패키지로 열고 발표자뷰, 슬라이드쇼, 모션 제어를 제공하는 웹 기반 발표 런타임입니다."
+            "inLanguage": "en",
+            "description": "DeckX Player opens AI-generated HTML presentations as .deckx packages with preview, presenter view, slideshow view, speaker notes, and motion controls."
           },
           {
             "@type": "SoftwareApplication",
@@ -101,7 +106,7 @@
             "applicationCategory": "PresentationApplication",
             "applicationSubCategory": "HTML presentation runtime",
             "operatingSystem": "Web",
-            "description": "DeckX Player opens .deckx HTML presentation packages and provides preview, presenter view, slideshow view, speaker notes, and motion controls without converting HTML to PPT.",
+            "description": "DeckX Player opens .deckx HTML presentation packages and provides preview, presenter view, slideshow view, speaker notes, and motion controls without converting HTML to PowerPoint.",
             "softwareVersion": "0.1.0",
             "creator": {
               "@id": "https://deckx-project.github.io/#organization"
@@ -126,34 +131,34 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "DeckX란?",
+                "name": "What is DeckX?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "DeckX는 HTML 기반 발표를 교환 가능한 패키지로 만들고, 같은 플레이어에서 재생하기 위한 포맷과 런타임의 이름입니다."
+                  "text": "DeckX is the format and runtime name for packaging HTML-based presentations as exchangeable presentation files."
                 }
               },
               {
                 "@type": "Question",
-                "name": "DeckX Player란?",
+                "name": "What is DeckX Player?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "DeckX Player는 .deckx HTML presentation package를 열어 미리보기, 발표자뷰, 슬라이드쇼, 발표자 노트, 모션 제어를 제공하는 웹 기반 발표 런타임입니다."
+                  "text": "DeckX Player is a browser-based runtime that opens .deckx HTML presentation packages with preview, presenter view, slideshow view, speaker notes, and motion controls."
                 }
               },
               {
                 "@type": "Question",
-                "name": "DeckX package란?",
+                "name": "What is a DeckX package?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "DeckX package는 manifest.json, HTML slides, Markdown speaker notes, styles, assets를 하나로 묶은 zip 기반 .deckx 발표 파일입니다."
+                  "text": "A DeckX package is a zip-based .deckx file containing manifest.json, HTML slides, Markdown speaker notes, styles, and assets."
                 }
               },
               {
                 "@type": "Question",
-                "name": "DeckX Player가 좋은 이유는?",
+                "name": "Why is DeckX useful?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "PPT로 다시 옮기지 않아도 HTML의 모션과 레이아웃을 그대로 발표할 수 있고, 발표자 노트와 자산까지 하나의 파일 또는 URL로 공유할 수 있습니다."
+                  "text": "DeckX keeps HTML motion and layout presentable without rebuilding it in PowerPoint, while sharing notes and assets as one file or URL."
                 }
               }
             ]
@@ -161,81 +166,68 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DSXGI3wp.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C9JeIkbQ.css">
+    <script type="module" crossorigin src="/assets/main-1ncX9J-Z.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CQSJ6mu4.css">
   </head>
   <body data-page="project">
     <div id="app">
-      <main class="project-landing">
+      <main class="project-landing" lang="en">
         <header class="project-nav">
           <a class="project-mark" href="/">
             <img class="brand-icon" src="/brand/deckx-icon.svg" alt="" aria-hidden="true" />
             <span>DeckX Player</span>
           </a>
           <nav class="project-nav-links" aria-label="Landing sections">
+            <a href="#start">Start</a>
             <a href="#ai-native">AI Native</a>
             <a href="#deckx">DeckX</a>
-            <a href="#concepts">개념</a>
-            <a href="#samples">샘플</a>
+            <a href="#concepts">Basics</a>
+            <a href="#samples">Samples</a>
           </nav>
-          <a class="btn compact" href="/player">플레이어 열기</a>
+          <a class="btn compact" href="/ko/">한국어</a>
+          <a class="btn compact" href="/player">Open Player</a>
         </header>
 
         <section class="project-hero">
           <div class="project-hero-copy">
             <span class="badge mono">AI-NATIVE HTML DECKS</span>
-            <h1>AI가 만든 HTML을 그대로 발표하세요</h1>
+            <h1>Present AI-generated HTML without converting it to PowerPoint</h1>
             <p>
-              동적인 콘텐츠는 PPT로 다시 옮기는 순간 표현력이 줄어듭니다. DeckX Player는
-              LLM과 agent가 만든 HTML 발표를 <code>.deckx</code> 패키지로 고정하고,
-              URL이나 로컬 zip에서 열어 발표자뷰와 슬라이드쇼로 바로 실행합니다.
+              Dynamic content loses its value when it is rebuilt as static slides. DeckX Player keeps
+              HTML authored by LLMs and agents in a <code>.deckx</code> package, then opens it from a
+              URL or local zip with presenter view and slideshow view.
             </p>
             <div class="project-hero-points" aria-label="DeckX positioning">
-              <span>HTML 그대로 사용</span>
-              <span>모션 중심 발표</span>
+              <span>Use HTML as-is</span>
+              <span>Motion-first presenting</span>
               <span>Agent-native authoring</span>
             </div>
             <div class="project-actions">
-              <a class="btn primary" href="/player">플레이어 열기</a>
-              <a class="btn" href="/player?deck=/decks/deckx-player-demo.deckx#landing">움직이는 샘플 보기</a>
+              <a class="btn primary" href="/player">Open Player</a>
+              <a class="btn" href="/player?deck=/decks/deckx-player-demo.deckx#landing">Watch a moving sample</a>
             </div>
           </div>
           <div class="project-product-preview" aria-label="DeckX Player preview">
-            <div class="preview-chrome">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+            <div class="preview-chrome"><span></span><span></span><span></span></div>
             <div class="preview-layout">
               <aside>
-                <strong>DeckX 열기</strong>
+                <strong>Open DeckX</strong>
                 <span>Recent DeckX</span>
                 <span>Official Samples</span>
                 <span>Uploads</span>
               </aside>
               <section>
                 <div class="preview-slide">
-                  <div class="preview-status-row">
-                    <small>LIVE DECKX</small>
-                    <em>Full motion</em>
-                  </div>
+                  <div class="preview-status-row"><small>LIVE DECKX</small><em>Full motion</em></div>
                   <strong>HTML motion deck</strong>
                   <div class="preview-motion-scene" aria-hidden="true">
                     <div class="preview-flow-line"></div>
                     <div class="preview-flow-line"></div>
                     <div class="preview-flow-line"></div>
-                    <div class="preview-metric-bars">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
+                    <div class="preview-metric-bars"><span></span><span></span><span></span><span></span></div>
                   </div>
                 </div>
-                <div class="preview-actions">
-                  <span>발표 시작</span>
-                  <span>모션 제어</span>
-                </div>
+                <div class="preview-actions"><span>Start presenting</span><span>Motion control</span></div>
               </section>
             </div>
           </div>
@@ -243,7 +235,7 @@
 
         <section class="project-section project-open-section">
           <form class="project-open" data-project-deckx-form>
-            <label for="project-deckx-url">DeckX URL 빠르게 열기</label>
+            <label for="project-deckx-url">Open a DeckX URL</label>
             <div class="project-open-row">
               <input
                 id="project-deckx-url"
@@ -254,43 +246,68 @@
                 value="https://deckx-project.github.io/decks/deckx-player-demo.deckx"
                 aria-label="DeckX URL"
               />
-              <button class="btn primary" type="submit">열기</button>
+              <button class="btn primary" type="submit">Open</button>
             </div>
           </form>
+        </section>
+
+        <section class="project-section project-start-section" id="start">
+          <div class="section-heading">
+            <p class="mono">GET STARTED</p>
+            <h2>Start from a copyable DeckX starter project</h2>
+            <span class="section-lead">
+              <code>deckx-project/deckx-starter-basic</code> is the public starter repository for creating a first DeckX deck.
+              It gives humans and agents the same source-folder contract with README, AGENTS.md, validation, and packaging scripts.
+            </span>
+          </div>
+          <div class="project-start-layout">
+            <div class="project-start-copy">
+              <pre class="deckx-tree" aria-label="DeckX starter project structure"><code>deckx-starter-basic/
+  deck/
+    manifest.json
+    slides/
+    notes/
+    styles/
+    assets/
+  package.json
+  README.md
+  AGENTS.md</code></pre>
+              <div class="project-actions">
+                <a class="btn primary" href="https://github.com/deckx-project/deckx-starter-basic">View public repo</a>
+              </div>
+            </div>
+            <ol class="project-start-steps">
+              <li><span>1</span><strong>Clone</strong><code>git clone https://github.com/deckx-project/deckx-starter-basic.git</code></li>
+              <li><span>2</span><strong>Edit</strong><code>deck/manifest.json, deck/slides, deck/notes, deck/styles</code></li>
+              <li><span>3</span><strong>Validate</strong><code>npm run validate</code></li>
+              <li><span>4</span><strong>Pack</strong><code>npm run pack</code></li>
+            </ol>
+          </div>
         </section>
 
         <section class="project-section" id="ai-native">
           <div class="section-heading">
             <p class="mono">WHY NOW</p>
-            <h2>AI 시대에는 PPT보다 HTML이 자연스럽습니다</h2>
+            <h2>In the AI era, HTML is a better presentation source than PPT</h2>
             <span class="section-lead">
-              Claude Artifacts, coding agent, HTML prototype 흐름이 이미 콘텐츠 제작 방식을 바꾸고 있습니다.
-              문제는 만든 HTML을 매번 발표용으로 묶고, 검증하고, 다시 여는 일이 귀찮다는 점입니다.
+              Claude Artifacts, coding agents, and HTML prototypes have already changed how content is produced.
+              The remaining friction is packaging, validating, and reopening that HTML every time it needs to be presented.
             </span>
           </div>
           <div class="info-grid">
-            <article>
-              <strong>PPT 변환 없이</strong>
-              <span>LLM이 만든 HTML/CSS 결과물을 이미지나 슬라이드 캡처로 죽이지 않고 원본 표현 그대로 발표합니다.</span>
-            </article>
-            <article>
-              <strong>모션 중심</strong>
-              <span>CSS animation, transition, 데이터 흐름, 단계적 reveal을 발표자가 Full, Reduced, Paused로 제어합니다.</span>
-            </article>
-            <article>
-              <strong>Agent-native</strong>
-              <span>DeckX 작성 규칙과 검증 스크립트를 skill로 제공해 LLM agent가 덱을 만들고 바로 플레이어에서 확인하게 합니다.</span>
-            </article>
+            <article><strong>No PPT conversion</strong><span>Keep the original HTML/CSS output from LLMs instead of flattening it into screenshots or rebuilt slide objects.</span></article>
+            <article><strong>Motion-first</strong><span>Let the presenter control CSS animation, transitions, data flow, and staged reveals with Full, Reduced, and Paused modes.</span></article>
+            <article><strong>Agent-native</strong><span>Expose DeckX authoring rules and validation scripts so LLM agents can create a deck and check it directly in the player.</span></article>
           </div>
         </section>
 
         <section class="project-section" id="deckx">
           <div class="section-heading">
             <p class="mono">DeckX FORMAT</p>
-            <h2>DeckX는 HTML 발표를 교환 가능한 파일로 만드는 포맷입니다</h2>
+            <h2>DeckX turns HTML presentations into exchangeable files</h2>
             <span class="section-lead">
-              DeckX는 새 파일 포맷입니다. HTML 슬라이드, 발표자 노트, 스타일, 이미지 자산,
-              메타데이터를 하나의 <code>.deckx</code> zip으로 묶고 플레이어가 동일한 런타임 계약으로 엽니다.
+              DeckX is a new package format. It bundles HTML slides, speaker notes, styles, image assets, and metadata
+              into one zip-based <code>.deckx</code> file that the player opens with the same runtime contract.
             </span>
           </div>
           <div class="project-format-grid">
@@ -306,22 +323,10 @@
   assets/
     hero.png</code></pre>
             <div class="info-grid format-cards">
-              <article>
-                <strong>파일 경계</strong>
-                <span><code>manifest.json</code>, slides, notes, styles, assets를 하나의 <code>.deckx</code> zip으로 묶습니다.</span>
-              </article>
-              <article>
-                <strong>URL 입력</strong>
-                <span>플레이어는 <code>?deck=&lt;url&gt;</code>을 읽고 같은 런타임에 어떤 DeckX 덱이든 로드합니다.</span>
-              </article>
-              <article>
-                <strong>안전한 기본값</strong>
-                <span>일반 DeckX는 script 없는 Safe Deck이며 발표자 노트는 슬라이드쇼에서 제외됩니다.</span>
-              </article>
-              <article>
-                <strong>검증 가능</strong>
-                <span>schema, asset path, notes coverage, overflow를 검사해 발표 파일을 재현 가능한 단위로 다룹니다.</span>
-              </article>
+              <article><strong>File boundary</strong><span>Bundle <code>manifest.json</code>, slides, notes, styles, and assets into a single <code>.deckx</code> zip package.</span></article>
+              <article><strong>URL input</strong><span>The player reads <code>?deck=&lt;url&gt;</code> and loads any DeckX deck into the same runtime.</span></article>
+              <article><strong>Safe default</strong><span>A normal DeckX package is a script-free Safe Deck, and speaker notes stay out of the slideshow view.</span></article>
+              <article><strong>Verifiable</strong><span>Schema, asset paths, notes coverage, and visual overflow can be checked before a deck is presented.</span></article>
             </div>
           </div>
         </section>
@@ -329,200 +334,73 @@
         <section class="project-section">
           <div class="section-heading">
             <p class="mono">PLAYER FLOW</p>
-            <h2>패키징 반복을 플레이어가 흡수합니다</h2>
+            <h2>The player absorbs the repetitive packaging work</h2>
             <span class="section-lead">
-              HTML을 발표 파일처럼 쓰려면 zip, URL, 첫 화면 확인, 발표자뷰, 관객 화면, 모션 옵션을 매번 맞춰야 합니다.
-              DeckX Player는 이 반복 작업을 하나의 열기 흐름으로 묶습니다.
+              Using HTML as a presentation file usually means coordinating zip files, URLs, first-slide checks,
+              presenter view, audience view, and motion settings. DeckX Player folds those steps into one opening flow.
             </span>
           </div>
           <div class="info-grid modes">
-            <article>
-              <strong>열기 전</strong>
-              <span>DeckX URL, 로컬 zip, 최근 DeckX, 공식 샘플 중 하나를 선택합니다.</span>
-            </article>
-            <article>
-              <strong>열었을 때</strong>
-              <span>첫 슬라이드 미리보기와 발표 시작 버튼을 중심으로 표시합니다.</span>
-            </article>
-            <article>
-              <strong>상세 정보</strong>
-              <span>validation, notes, session 같은 DeckX 메타는 필요할 때만 펼쳐봅니다.</span>
-            </article>
+            <article><strong>Before opening</strong><span>Choose a DeckX URL, local zip, recent deck, or official sample.</span></article>
+            <article><strong>After opening</strong><span>Start from a first-slide preview and a clear presentation launch action.</span></article>
+            <article><strong>When details matter</strong><span>Validation, notes, and session metadata stay available without dominating the first screen.</span></article>
           </div>
         </section>
 
         <section class="project-section" id="concepts">
           <div class="section-heading">
             <p class="mono">DeckX BASICS</p>
-            <h2>DeckX를 이해하는 네 가지 질문</h2>
+            <h2>Four questions that define DeckX</h2>
             <span class="section-lead">
-              DeckX는 처음 보는 포맷이므로 먼저 용어가 분명해야 합니다. 발표자는 새 편집기를 배우는 것이 아니라,
-              HTML 발표를 파일처럼 열고 운영하는 방식을 이해하면 됩니다.
+              DeckX is a new format, so the words need to be clear first. Presenters do not need a new editor;
+              they need to understand how HTML presentations can be opened and operated like files.
             </span>
           </div>
-          <div class="project-answer-block">
-            <strong>DeckX란?</strong>
-            <span>
-              DeckX는 HTML 기반 발표를 교환 가능한 패키지로 만들고, 같은 플레이어에서 재생하기 위한
-              포맷과 런타임의 이름입니다.
-            </span>
-          </div>
-          <div class="project-answer-block">
-            <strong>DeckX Player란?</strong>
-            <span>
-              DeckX Player는 <code>.deckx</code> HTML presentation package를 열어 미리보기,
-              발표자뷰, 슬라이드쇼, 발표자 노트, 모션 제어를 제공하는 웹 기반 발표 런타임입니다.
-            </span>
-          </div>
-          <div class="project-answer-block">
-            <strong>DeckX package란?</strong>
-            <span>
-              DeckX package는 <code>manifest.json</code>, HTML slides, Markdown speaker notes,
-              styles, assets를 하나로 묶은 zip 기반 <code>.deckx</code> 발표 파일입니다.
-            </span>
-          </div>
-          <div class="project-answer-block">
-            <strong>뭐가 좋은가요?</strong>
-            <span>
-              PPT로 다시 옮기지 않아도 HTML의 모션과 레이아웃을 그대로 발표할 수 있고,
-              발표자 노트와 자산까지 하나의 파일 또는 URL로 공유할 수 있습니다.
-            </span>
-          </div>
+          <div class="project-answer-block"><strong>What is DeckX?</strong><span>DeckX is the name of the format and runtime for packaging HTML-based presentations as exchangeable presentation files.</span></div>
+          <div class="project-answer-block"><strong>What is DeckX Player?</strong><span>DeckX Player is a browser-based runtime that opens <code>.deckx</code> HTML presentation packages with preview, presenter view, slideshow view, speaker notes, and motion controls.</span></div>
+          <div class="project-answer-block"><strong>What is a DeckX package?</strong><span>A DeckX package is a zip-based <code>.deckx</code> file containing <code>manifest.json</code>, HTML slides, Markdown speaker notes, styles, and assets.</span></div>
+          <div class="project-answer-block"><strong>Why is it useful?</strong><span>You can present HTML motion and layout directly, without rebuilding it in PPT, while sharing notes and assets as one file or URL.</span></div>
           <div class="info-grid modes">
-            <article>
-              <strong>HTML 표현력 유지</strong>
-              <span>CSS motion, 데이터 흐름, 인터랙티브한 레이아웃을 이미지 캡처로 죽이지 않고 발표합니다.</span>
-            </article>
-            <article>
-              <strong>발표 운영 내장</strong>
-              <span>미리보기, 발표자뷰, 슬라이드쇼, 노트, 타이머, 모션 제어를 플레이어가 담당합니다.</span>
-            </article>
-            <article>
-              <strong>공유 가능한 파일</strong>
-              <span><code>.deckx</code> zip이나 URL로 전달해 같은 런타임에서 다시 열고 발표할 수 있습니다.</span>
-            </article>
+            <article><strong>Keep HTML expression</strong><span>Preserve CSS motion, data flow, and interactive layout instead of flattening them into images.</span></article>
+            <article><strong>Presentation operations included</strong><span>Preview, presenter view, slideshow view, notes, timer, and motion controls are handled by the player.</span></article>
+            <article><strong>Shareable file</strong><span>Send a <code>.deckx</code> zip or URL and reopen it in the same runtime.</span></article>
           </div>
         </section>
 
         <section class="project-section">
-          <div class="section-heading">
-            <p class="mono">MOTION</p>
-            <h2>Full, Reduced, Paused</h2>
-          </div>
+          <div class="section-heading"><p class="mono">MOTION</p><h2>Full, Reduced, Paused</h2></div>
           <div class="info-grid modes">
-            <article>
-              <strong>Full</strong>
-              <span>덱 CSS animation과 transition을 그대로 재생합니다.</span>
-            </article>
-            <article>
-              <strong>Reduced</strong>
-              <span>모션을 거의 즉시 끝나게 줄여 발표장 환경이나 접근성 요구에 맞춥니다.</span>
-            </article>
-            <article>
-              <strong>Paused</strong>
-              <span>모든 CSS animation을 일시정지합니다. 모션 데모 검토나 발표 중 정지에 유용합니다.</span>
-            </article>
+            <article><strong>Full</strong><span>Run deck CSS animation and transitions as authored.</span></article>
+            <article><strong>Reduced</strong><span>Shorten motion for accessibility needs or presentation-room constraints.</span></article>
+            <article><strong>Paused</strong><span>Pause CSS animation for review, explanation, or controlled moments during a talk.</span></article>
           </div>
         </section>
 
         <section class="project-section" id="samples">
           <div class="section-heading">
             <p class="mono">OFFICIAL SAMPLES</p>
-            <h2>움직이는 DeckX를 바로 열어볼 수 있습니다</h2>
-            <span class="section-lead">
-              공식 샘플은 사용자 히스토리와 분리됩니다. 모션, 정적 설명, 4:3 캔버스, 이미지 자산,
-              롱덱 탐색을 같은 런타임에서 비교할 수 있습니다.
-            </span>
+            <h2>Open moving DeckX examples immediately</h2>
+            <span class="section-lead">Official samples stay separate from user history. Compare motion decks, static explanations, 4:3 canvases, image-heavy decks, and long-deck navigation in the same runtime.</span>
           </div>
           <div class="project-demo-grid">
-            <article class="project-demo-card">
-              <div>
-                <h3>DeckX zip 데모</h3>
-                <p>public/decks/deckx-player-demo.deckx 파일을 그대로 로드</p>
-                <span>이 프로젝트 자체를 DeckX package로 설명하는 도그푸딩 덱입니다.</span>
-              </div>
-              <code>/decks/deckx-player-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/deckx-player-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
-            <article class="project-demo-card">
-              <div>
-                <h3>정적 프레임워크 데모</h3>
-                <p>Deck/Runtime 경계를 설명하는 DeckX 샘플</p>
-                <span>텍스트 중심 발표가 기본 플레이어 기능과 어떻게 결합되는지 확인합니다.</span>
-              </div>
-              <code>/decks/static-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/static-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
-            <article class="project-demo-card">
-              <div>
-                <h3>모션 그래픽 데모</h3>
-                <p>같은 런타임에 CSS motion DeckX를 교체한 샘플</p>
-                <span>CSS animation이 포함된 덱에서 Full, Reduced, Paused 차이를 확인합니다.</span>
-              </div>
-              <code>/decks/motion-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/motion-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
-            <article class="project-demo-card">
-              <div>
-                <h3>4:3 캔버스 데모</h3>
-                <p>DeckX aspectRatio가 렌더러에 반영되는 샘플</p>
-                <span>16:9가 아닌 DeckX canvas도 발표자뷰와 슬라이드쇼에 동일하게 반영됩니다.</span>
-              </div>
-              <code>/decks/classic-4x3-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/classic-4x3-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
-            <article class="project-demo-card">
-              <div>
-                <h3>이미지 헤비 데모</h3>
-                <p>96개 package-local 이미지를 로드하는 asset stress 샘플</p>
-                <span>이미지가 많은 DeckX에서 preview, overview, object URL 처리 비용을 확인합니다.</span>
-              </div>
-              <code>/decks/image-heavy-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/image-heavy-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
-            <article class="project-demo-card">
-              <div>
-                <h3>120장 롱덱 데모</h3>
-                <p>많은 페이지에서 goto, search, overview 사용성을 확인하는 샘플</p>
-                <span>120장 DeckX를 통해 발표자뷰 썸네일 목록과 키보드 탐색 한계를 관찰합니다.</span>
-              </div>
-              <code>/decks/long-120-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/long-120-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
-            <article class="project-demo-card">
-              <div>
-                <h3>120장 이미지 롱덱 데모</h3>
-                <p>긴 DeckX와 package-local 이미지를 함께 로드하는 stress 샘플</p>
-                <span>120장 전체에 이미지가 포함된 DeckX로 탐색, 검색, 썸네일, asset 처리를 함께 관찰합니다.</span>
-              </div>
-              <code>/decks/long-image-demo.deckx</code>
-              <a class="btn compact" href="/player?deck=/decks/long-image-demo.deckx#landing">플레이어에서 열기</a>
-            </article>
+            <article class="project-demo-card"><div><h3>DeckX zip demo</h3><p>Loads public/decks/deckx-player-demo.deckx as a packaged presentation</p><span>A dogfooding deck that explains DeckX Player using the DeckX package format itself.</span></div><code>/decks/deckx-player-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/deckx-player-demo.deckx#landing">Open in Player</a></article>
+            <article class="project-demo-card"><div><h3>Static framework demo</h3><p>A DeckX sample explaining the Deck/Runtime boundary</p><span>Shows how text-heavy talks combine with the player basics.</span></div><code>/decks/static-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/static-demo.deckx#landing">Open in Player</a></article>
+            <article class="project-demo-card"><div><h3>Motion graphics demo</h3><p>A CSS motion DeckX loaded into the same runtime</p><span>Compare Full, Reduced, and Paused motion modes with an animated deck.</span></div><code>/decks/motion-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/motion-demo.deckx#landing">Open in Player</a></article>
+            <article class="project-demo-card"><div><h3>Classic 4:3 canvas demo</h3><p>A sample showing DeckX aspectRatio support</p><span>Confirms that non-16:9 DeckX canvases render consistently in presenter and slideshow views.</span></div><code>/decks/classic-4x3-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/classic-4x3-demo.deckx#landing">Open in Player</a></article>
+            <article class="project-demo-card"><div><h3>Image-heavy demo</h3><p>An asset stress sample with 96 package-local images</p><span>Checks preview, overview, and object URL behavior for image-heavy decks.</span></div><code>/decks/image-heavy-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/image-heavy-demo.deckx#landing">Open in Player</a></article>
+            <article class="project-demo-card"><div><h3>Long 120-slide demo</h3><p>A sample for goto, search, and overview behavior across many pages</p><span>Exercises presenter thumbnails and keyboard navigation limits with a 120-slide DeckX.</span></div><code>/decks/long-120-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/long-120-demo.deckx#landing">Open in Player</a></article>
+            <article class="project-demo-card"><div><h3>Long image demo</h3><p>A stress sample combining long-deck navigation with package-local images</p><span>Checks navigation, search, thumbnails, and asset handling across 120 image-backed slides.</span></div><code>/decks/long-image-demo.deckx</code><a class="btn compact" href="/player?deck=/decks/long-image-demo.deckx#landing">Open in Player</a></article>
           </div>
         </section>
 
         <section class="project-section" id="workspace">
-          <div class="section-heading">
-            <p class="mono">NEXT STRATEGY</p>
-            <h2>먼저 AI가 읽고 만들기 쉬운 경로를 검토합니다</h2>
-          </div>
+          <div class="section-heading"><p class="mono">NEXT STRATEGY</p><h2>Make DeckX easy for search engines and AI agents to read first</h2></div>
           <div class="info-grid modes">
-            <article>
-              <strong><code>llms.txt</code> 검토</strong>
-              <span>DeckX 정의, package spec, 작성 가이드, 샘플 URL을 LLM이 빠르게 읽도록 공개 문서 구조를 정리할 수 있습니다.</span>
-            </article>
-            <article>
-              <strong>MCP와 skill 검토</strong>
-              <span>DeckX authoring skill, validation script, 샘플 생성 흐름을 agent-native 제작 경험으로 제공할지 먼저 검증합니다.</span>
-            </article>
-            <article>
-              <strong>검색과 AI 답변 근거</strong>
-              <span>정적 HTML, canonical, sitemap, robots.txt, JSON-LD, 공개 Markdown 문서로 검색 엔진과 AI answer engine이 같은 사실을 읽게 합니다.</span>
-            </article>
-            <article>
-              <strong>팀 기능은 이후</strong>
-              <span>SSO, 업로드, 팀 이력은 아직 구현된 기능이 아니며, 제품화 이후 확장 후보로만 다룹니다.</span>
-            </article>
+            <article><strong>English as the default</strong><span>Use English as the canonical discovery surface for global search and AI answer engines, while keeping a Korean version for local users.</span></article>
+            <article><strong><code>llms.txt</code> review</strong><span>Publish DeckX definitions, package specs, authoring guides, and sample URLs in a concise structure that LLMs can read quickly.</span></article>
+            <article><strong>MCP and skills review</strong><span>Validate whether DeckX authoring skills, validation scripts, and sample generation should become an agent-native creation workflow.</span></article>
+            <article><strong>Search and AI answer evidence</strong><span>Align static HTML, canonical links, <code>hreflang</code>, <code>sitemap</code>, <code>robots.txt</code>, <code>JSON-LD</code>, and public Markdown docs so crawlers and AI answer engines read the same facts.</span></article>
+            <article><strong>Team features later</strong><span>SSO, upload, team history, and team libraries are not implemented features today. Treat them only as future product candidates.</span></article>
           </div>
         </section>
       </main>

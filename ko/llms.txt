@@ -1,0 +1,43 @@
+# DeckX Player
+
+> DeckX Player는 `.deckx` HTML presentation package를 열어 미리보기, 발표자뷰, 슬라이드쇼, 발표자 노트, 모션 제어를 제공하는 웹 런타임입니다.
+
+DeckX는 AI-native HTML presentation format이자 player입니다. 사람 또는 LLM agent가 HTML slides, Markdown speaker notes, deck styles, local assets를 zip 기반 `.deckx` 파일로 묶고 URL 또는 로컬 파일에서 열 수 있게 합니다.
+
+영어 페이지가 canonical discovery surface이며, 한국어 버전은 `/ko/` 아래에 함께 제공합니다.
+
+## 주요 페이지
+
+- [영문 랜딩](https://deckx-project.github.io/): 검색과 AI answer engine을 위한 canonical landing.
+- [한국어 랜딩](https://deckx-project.github.io/ko/): 한국어 설명 페이지.
+- [Player](https://deckx-project.github.io/player): `.deckx` URL, 로컬 `.deckx` zip, 최근 DeckX, 공식 샘플을 엽니다.
+
+## 핵심 개념
+
+- DeckX: HTML 발표를 교환 가능한 발표 파일로 만들기 위한 포맷과 런타임 이름.
+- DeckX Player: `.deckx` package를 열어 preview, presenter view, slideshow view, notes, timer, motion controls를 실행하는 browser runtime.
+- DeckX Package: `manifest.json`, `slides/`, `notes/`, `styles/`, `assets/`를 담은 zip 기반 `.deckx` 파일.
+- Safe Deck: 기본 DeckX 모드. HTML/CSS/assets는 허용하지만 script와 inline event handler는 허용하지 않습니다.
+
+## 문서
+
+- [전체 LLM context](https://deckx-project.github.io/ko/llms-full.txt): 한국어 상세 요약과 문서 링크.
+- [영문 LLM context](https://deckx-project.github.io/llms-full.txt): 영어 canonical machine-readable context.
+- [DeckX Package spec - Korean](https://deckx-project.github.io/ko/docs/deckx-package.md)
+- [Agent Deck Authoring Guide - Korean](https://deckx-project.github.io/ko/docs/agent-deck-authoring.md)
+- [Packaging Strategy - Korean](https://deckx-project.github.io/ko/docs/packaging-strategy.md)
+- [MCP Strategy - Korean](https://deckx-project.github.io/ko/docs/mcp-strategy.md)
+
+## 스타터 프로젝트
+
+- [DeckX starter repository](https://github.com/deckx-project/deckx-starter-basic): 첫 DeckX를 만들기 위한 public starter repo. 랜딩은 repo만 링크하며, packaged starter deck 공개는 별도 흐름에서 다룹니다.
+
+## 공식 샘플
+
+- [DeckX zip demo](https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing)
+- [Static framework demo](https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing)
+- [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing)
+- [Classic 4:3 demo](https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing)
+- [Image-heavy demo](https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing)
+- [Long 120-slide demo](https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing)
+- [Long image demo](https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing)

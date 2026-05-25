@@ -38,3 +38,8 @@ Possible product path:
 2. Keep the local MCP server prototype in the source repository.
 3. Test DeckX creation with multiple agents.
 4. Promote MCP/skill support only after repeatable authoring outcomes are proven.
+
+## Related Links
+
+- Korean version: https://deckx-project.github.io/ko/docs/mcp-strategy.md
+- English landing: https://deckx-project.github.io/

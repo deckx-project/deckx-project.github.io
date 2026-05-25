@@ -3,10 +3,16 @@
 DeckX Player is a web runtime for opening `.deckx` HTML presentation packages with preview, presenter view, slideshow view, speaker notes, timers, and motion controls.
 
 Canonical landing page: https://deckx-project.github.io/
+Korean landing page: https://deckx-project.github.io/ko/
 Player URL: https://deckx-project.github.io/player
 Short LLM context: https://deckx-project.github.io/llms.txt
+Korean LLM context: https://deckx-project.github.io/ko/llms.txt
 Sitemap: https://deckx-project.github.io/sitemap.xml
 Robots policy: https://deckx-project.github.io/robots.txt
+
+## Language Strategy
+
+English is the default discovery language for global search and AI answer engines. Korean versions are published under `/ko/` with reciprocal `hreflang` links and sitemap alternates.
 
 ## What DeckX Is
 
@@ -41,7 +47,7 @@ my-talk/
     hero.png
 ```
 
-The package contract is centered on `manifest.json`. Slides are HTML documents or fragments. Speaker notes are Markdown files. Styles and assets are package-local resources. DeckX Player resolves the package as a single presentation unit.
+The package contract is centered on `manifest.json`. Slides are HTML fragments. Speaker notes are Markdown files. Styles and assets are package-local resources. DeckX Player resolves the package as a single presentation unit.
 
 ## Safe Deck Rules
 
@@ -55,7 +61,22 @@ The default DeckX mode is Safe Deck. Safe Deck allows HTML, CSS, and package-loc
 - Packaging Strategy: https://deckx-project.github.io/docs/packaging-strategy.md
 - MCP Strategy: https://deckx-project.github.io/docs/mcp-strategy.md
 
+Korean equivalents:
+
+- https://deckx-project.github.io/ko/docs/deckx-package.md
+- https://deckx-project.github.io/ko/docs/agent-deck-authoring.md
+- https://deckx-project.github.io/ko/docs/packaging-strategy.md
+- https://deckx-project.github.io/ko/docs/mcp-strategy.md
+
 The MCP and skill direction is under review. DeckX may provide authoring skills, validation scripts, sample generation, or MCP tools later, but SSO, upload, team history, and team libraries are not implemented product features today.
+
+## Starter Project
+
+The landing exposes the starter repository as the first authoring path:
+
+- https://github.com/deckx-project/deckx-starter-basic
+
+The packaged starter deck is not linked from the landing until the starter publication flow is handled separately.
 
 ## Official Sample Decks
 

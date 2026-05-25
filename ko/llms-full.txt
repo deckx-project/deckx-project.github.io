@@ -1,0 +1,68 @@
+# DeckX Player 한국어 LLM Context
+
+DeckX Player는 `.deckx` HTML presentation package를 열어 preview, presenter view, slideshow view, speaker notes, timer, motion controls를 제공하는 웹 런타임입니다.
+
+영문 canonical landing: https://deckx-project.github.io/
+한국어 landing: https://deckx-project.github.io/ko/
+Player URL: https://deckx-project.github.io/player
+영문 LLM context: https://deckx-project.github.io/llms.txt
+Sitemap: https://deckx-project.github.io/sitemap.xml
+Robots policy: https://deckx-project.github.io/robots.txt
+
+## 언어 전략
+
+글로벌 검색과 AI answer engine 유입을 위해 영어를 기본 discovery language로 둡니다. 한국어 사용자를 위해 `/ko/` 아래에 같은 핵심 설명과 문서 링크를 제공합니다.
+
+## DeckX란?
+
+DeckX는 HTML 기반 발표를 교환 가능한 presentation file로 만들기 위한 AI-native format과 runtime입니다. HTML/CSS가 source of truth인 발표를 PPT screenshot이나 별도 편집기 객체로 다시 만들지 않고, package로 고정해 발표할 수 있게 합니다.
+
+## DeckX Player란?
+
+DeckX Player는 public URL 또는 local zip에서 `.deckx` package를 엽니다. 제공 기능은 다음과 같습니다.
+
+- DeckX URL 입력과 player entry.
+- 발표 전 첫 슬라이드 preview.
+- 현재 슬라이드, 다음 슬라이드, speaker notes, timer, pacing context를 포함한 presenter view.
+- 관객 화면용 slideshow view.
+- Full, Reduced, Paused motion controls.
+- 공식 sample decks.
+
+## DeckX Package Structure
+
+```text
+my-talk/
+  manifest.json
+  slides/
+    001-intro.html
+  notes/
+    001-intro.md
+  styles/
+    theme.css
+  assets/
+    hero.png
+```
+
+`.deckx` 파일은 zip package입니다. `manifest.json`이 package contract이고, slides는 HTML fragment, notes는 Markdown file, styles와 assets는 package-local resource입니다.
+
+## Safe Deck Rules
+
+기본 DeckX 모드는 Safe Deck입니다. HTML, CSS, package-local assets는 허용하지만 script와 inline event handler는 허용하지 않습니다. 이렇게 해야 AI가 만든 발표 파일을 더 쉽게 검토하고 안전하게 공유할 수 있습니다.
+
+## 공개 문서
+
+- DeckX Package spec: https://deckx-project.github.io/ko/docs/deckx-package.md
+- Agent Deck Authoring Guide: https://deckx-project.github.io/ko/docs/agent-deck-authoring.md
+- Packaging Strategy: https://deckx-project.github.io/ko/docs/packaging-strategy.md
+- MCP Strategy: https://deckx-project.github.io/ko/docs/mcp-strategy.md
+- Manifest Schema: https://deckx-project.github.io/docs/deckx-manifest.schema.json
+
+MCP와 skill 방향은 검토 중입니다. DeckX authoring skill, validation script, sample generation, MCP tool을 나중에 제공할 수 있지만, SSO, upload, team history, team library는 현재 구현된 기능이 아닙니다.
+
+## 스타터 프로젝트
+
+랜딩은 첫 작성 경로로 starter repository를 노출합니다.
+
+- https://github.com/deckx-project/deckx-starter-basic
+
+packaged starter deck 공개는 별도 세션에서 진행 중이므로 이번 랜딩에서는 repo 링크만 제공합니다.
