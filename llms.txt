@@ -1,0 +1,63 @@
+# DeckX Player
+
+> DeckX Player is a web runtime for opening `.deckx` HTML presentation packages with preview, presenter view, slideshow view, speaker notes, and motion controls.
+
+DeckX is an AI-native HTML presentation format and player. It lets humans or LLM agents package HTML slides, Markdown speaker notes, deck styles, and local assets into a zip-based `.deckx` file that can be opened from a URL or local file.
+
+## Primary Pages
+
+- [Project landing](https://deckx-project.github.io/): DeckX positioning, concepts, demos, and player entry point.
+- [Player](https://deckx-project.github.io/player): Open a `.deckx` URL, local `.deckx` zip, recent deck, or official sample.
+
+## Core Concepts
+
+- DeckX: The format and runtime name for exchangeable HTML presentations.
+- DeckX Player: The browser-based runtime that opens `.deckx` packages and runs preview, presenter view, slideshow view, notes, timer, and motion controls.
+- DeckX Package: A zip-based `.deckx` file containing `manifest.json`, `slides/`, `notes/`, `styles/`, and `assets/`.
+- Safe Deck: The default DeckX mode. HTML/CSS/assets are allowed; scripts and inline event handlers are not allowed.
+
+## Documentation
+
+- [DeckX Package spec](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/DECKX_PACKAGE.md): Package folder structure, manifest fields, slide contract, notes contract, and validation requirements.
+- [Agent Deck Authoring Guide](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/AGENT_DECK_AUTHORING.md): How humans and LLM agents should author DeckX source folders.
+- [DeckX Manifest Schema](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/deckx-manifest.schema.json): JSON Schema draft for `manifest.json`.
+- [Packaging Strategy](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/PACKAGING_STRATEGY.md): Online player and offline package direction.
+- [MCP Strategy](https://github.com/deckx-project/deckx-player-dev/blob/main/docs/MCP_STRATEGY.md): Current MCP prototype and review notes.
+
+## Official Sample Decks
+
+- [DeckX zip demo](https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing): Dogfooding deck explaining DeckX Player itself.
+- [Static framework demo](https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing): Text-focused DeckX runtime explanation.
+- [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing): CSS animation demo with Full, Reduced, and Paused motion modes.
+- [Classic 4:3 demo](https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing): Aspect ratio handling sample.
+- [Image-heavy demo](https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing): Package-local image asset loading sample.
+- [Long 120-slide demo](https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing): Long deck navigation, search, and overview sample.
+- [Long image demo](https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing): Long deck plus package-local image stress sample.
+
+## Authoring Shape
+
+```text
+my-talk/
+  manifest.json
+  slides/
+    001-intro.html
+  notes/
+    001-intro.md
+  styles/
+    theme.css
+  assets/
+    hero.png
+```
+
+Build and validate local examples with:
+
+```bash
+npm run pack:deckx
+npm run validate:deckx
+npm run build
+```
+
+## Repository
+
+- Source repository: https://github.com/deckx-project/deckx-player-dev
+- Public Pages deployment: https://github.com/deckx-project/deckx-project.github.io
