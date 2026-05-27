@@ -27,7 +27,7 @@ DeckX Player opens `.deckx` packages from public URLs or local zip files. It pro
 - Presenter view with current slide, next slide, speaker notes, timer, and pacing context.
 - Slideshow view for the audience display.
 - Motion controls: Full, Reduced, and Paused.
-- Official sample decks for dogfooding, static explanation, CSS motion, 4:3 canvas, image-heavy decks, long decks, and long image decks.
+- Official sample decks grouped by content language, including pattern-first authoring, English/Korean developer samples, dogfooding, static explanation, CSS motion, 4:3 canvas, image-heavy decks, natural long decks, and long image decks.
 
 ## DeckX Package Structure
 
@@ -57,6 +57,7 @@ The default DeckX mode is Safe Deck. Safe Deck allows HTML, CSS, and package-loc
 
 - DeckX Package spec: https://deckx-project.github.io/docs/deckx-package.md
 - Agent Deck Authoring Guide: https://deckx-project.github.io/docs/agent-deck-authoring.md
+- DeckX Samples: https://deckx-project.github.io/docs/samples.md
 - DeckX Manifest Schema: https://deckx-project.github.io/docs/deckx-manifest.schema.json
 - Packaging Strategy: https://deckx-project.github.io/docs/packaging-strategy.md
 - MCP Strategy: https://deckx-project.github.io/docs/mcp-strategy.md
@@ -76,27 +77,34 @@ The landing exposes the starter repository as the first authoring path:
 
 - https://github.com/deckx-project/deckx-starter-basic
 
-The packaged starter deck is not linked from the landing until the starter publication flow is handled separately.
+The packaged starter deck is available as an official sample for previewing the starter flow.
 
 ## Official Sample Decks
 
+- DeckX starter: https://deckx-project.github.io/player?deck=/decks/starter-basic.deckx#landing
 - DeckX zip demo: https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing
+- Pattern library: https://deckx-project.github.io/player?deck=/decks/pattern-library.deckx#landing
+- English developer sample: https://deckx-project.github.io/player?deck=/decks/sample-en.deckx#landing
+- Korean developer sample: https://deckx-project.github.io/player?deck=/decks/sample-ko.deckx#landing
+- Korean layout templates: https://deckx-project.github.io/player?deck=/decks/template-ko.deckx#landing
 - Static framework demo: https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing
 - Motion graphics demo: https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing
+  - Includes staged reveal, morph comparison, motion path flow, kinetic typography, and data transition pages.
 - Classic 4:3 demo: https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing
 - Image-heavy demo: https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing
-- Long 120-slide demo: https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing
-- Long image demo: https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing
+- Release runbook long deck: https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing
+- System snapshot image deck: https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing
 
 ## Suggested Agent Workflow
 
 1. Read the DeckX Package spec and manifest schema.
-2. Create a package source folder with `manifest.json`, `slides/`, `notes/`, `styles/`, and `assets/`.
-3. Keep slides script-free unless the future trusted deck mode explicitly allows scripts.
-4. Validate manifest fields, slide paths, asset paths, and note coverage.
-5. Package the folder into `.deckx`.
-6. Open the package in DeckX Player with `/player?deck=<url>#landing`.
-7. Check preview, presenter view, slideshow view, notes, timer, and motion controls.
+2. Plan the outline and choose a slide pattern before writing HTML.
+3. Create a package source folder with `manifest.json`, `slides/`, `notes/`, `styles/`, and `assets/`.
+4. Keep slides script-free unless trusted runtime is explicitly enabled.
+5. Validate manifest fields, slide paths, asset paths, note coverage, and visual overflow.
+6. Package the folder into `.deckx`.
+7. Open the package in DeckX Player with `/player?deck=<url>#landing`.
+8. Check preview, presenter view, slideshow view, notes, timer, and motion controls.
 
 ## Product Positioning
 

@@ -25,6 +25,7 @@ English is the canonical discovery language for DeckX. Korean equivalents are pu
 - [Korean LLM context](https://deckx-project.github.io/ko/llms.txt): Korean companion context.
 - [DeckX Package spec](https://deckx-project.github.io/docs/deckx-package.md): Package folder structure, manifest fields, slide contract, notes contract, and validation requirements.
 - [Agent Deck Authoring Guide](https://deckx-project.github.io/docs/agent-deck-authoring.md): How humans and LLM agents should author DeckX source folders.
+- [DeckX Samples](https://deckx-project.github.io/docs/samples.md): Official sample quality bar, language grouping, and demo review matrix.
 - [DeckX Manifest Schema](https://deckx-project.github.io/docs/deckx-manifest.schema.json): JSON Schema draft for `manifest.json`.
 - [Packaging Strategy](https://deckx-project.github.io/docs/packaging-strategy.md): Online player and offline package direction.
 - [MCP Strategy](https://deckx-project.github.io/docs/mcp-strategy.md): MCP and skill options under review, not yet a committed public product feature.
@@ -43,19 +44,23 @@ English is the canonical discovery language for DeckX. Korean equivalents are pu
 
 ## Starter Project
 
-- [DeckX starter repository](https://github.com/deckx-project/deckx-starter-basic): Public starter repo for creating a first DeckX deck. The landing links to the repository only; packaged starter deck publication is handled separately.
+- [DeckX starter repository](https://github.com/deckx-project/deckx-starter-basic): Public starter repo for creating a first DeckX deck.
 
 ## Official Sample Decks
 
 - [DeckX starter repo](https://github.com/deckx-project/deckx-starter-basic): Public starter repository with README, AGENTS.md, validation scripts, and a minimal DeckX source folder.
 - [DeckX starter demo](https://deckx-project.github.io/player?deck=/decks/starter-basic.deckx#landing): Packaged preview of the starter deck.
+- [Pattern library](https://deckx-project.github.io/player?deck=/decks/pattern-library.deckx#landing): Pattern-first reference deck for safer LLM-authored slides.
+- [English developer sample](https://deckx-project.github.io/player?deck=/decks/sample-en.deckx#landing): Natural English technical sample deck.
+- [Korean developer sample](https://deckx-project.github.io/player?deck=/decks/sample-ko.deckx#landing): Korean sample deck focused on slide fundamentals.
+- [Korean layout templates](https://deckx-project.github.io/player?deck=/decks/template-ko.deckx#landing): Reusable PPT-style DeckX layout presets.
 - [DeckX zip demo](https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing): Dogfooding deck explaining DeckX Player itself.
 - [Static framework demo](https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing): Text-focused DeckX runtime explanation.
-- [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing): CSS animation demo with Full, Reduced, and Paused motion modes.
+- [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing): CSS motion preset demo with staged reveal, morph, motion path, kinetic type, and data transition pages.
 - [Classic 4:3 demo](https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing): Aspect ratio handling sample.
 - [Image-heavy demo](https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing): Package-local image asset loading sample.
-- [Long 120-slide demo](https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing): Long deck navigation, search, and overview sample.
-- [Long image demo](https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing): Long deck plus package-local image stress sample.
+- [Release runbook long deck](https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing): Natural 120-slide developer runbook for navigation, search, and overview.
+- [System snapshot image deck](https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing): Long deck plus package-local system snapshot images.
 
 ## Authoring Shape
 

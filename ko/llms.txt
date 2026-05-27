@@ -25,19 +25,24 @@ DeckX는 AI-native HTML presentation format이자 player입니다. 사람 또는
 - [영문 LLM context](https://deckx-project.github.io/llms-full.txt): 영어 canonical machine-readable context.
 - [DeckX Package spec - Korean](https://deckx-project.github.io/ko/docs/deckx-package.md)
 - [Agent Deck Authoring Guide - Korean](https://deckx-project.github.io/ko/docs/agent-deck-authoring.md)
+- [DeckX Samples](https://deckx-project.github.io/docs/samples.md): 공식 샘플 품질 기준과 언어 그룹 리뷰.
 - [Packaging Strategy - Korean](https://deckx-project.github.io/ko/docs/packaging-strategy.md)
 - [MCP Strategy - Korean](https://deckx-project.github.io/ko/docs/mcp-strategy.md)
 
 ## 스타터 프로젝트
 
-- [DeckX starter repository](https://github.com/deckx-project/deckx-starter-basic): 첫 DeckX를 만들기 위한 public starter repo. 랜딩은 repo만 링크하며, packaged starter deck 공개는 별도 흐름에서 다룹니다.
+- [DeckX starter repository](https://github.com/deckx-project/deckx-starter-basic): 첫 DeckX를 만들기 위한 public starter repo.
 
 ## 공식 샘플
 
+- [Pattern library](https://deckx-project.github.io/player?deck=/decks/pattern-library.deckx#landing): LLM 작성 슬라이드의 저점을 올리는 pattern-first reference deck.
+- [English developer sample](https://deckx-project.github.io/player?deck=/decks/sample-en.deckx#landing): 영문 개발자 발표 샘플.
+- [Korean developer sample](https://deckx-project.github.io/player?deck=/decks/sample-ko.deckx#landing): 슬라이드 본질에 집중한 한국어 샘플.
+- [Korean layout templates](https://deckx-project.github.io/player?deck=/decks/template-ko.deckx#landing): PPT 기본 레이아웃을 DeckX로 옮긴 한국어 템플릿 샘플.
 - [DeckX zip demo](https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing)
 - [Static framework demo](https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing)
-- [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing)
+- [Motion graphics demo](https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing): staged reveal, morph, motion path, kinetic type, data transition 포함.
 - [Classic 4:3 demo](https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing)
 - [Image-heavy demo](https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing)
-- [Long 120-slide demo](https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing)
-- [Long image demo](https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing)
+- [Release runbook long deck](https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing)
+- [System snapshot image deck](https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing)

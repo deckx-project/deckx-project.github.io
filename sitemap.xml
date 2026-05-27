@@ -80,6 +80,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://deckx-project.github.io/docs/samples.md</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://deckx-project.github.io/docs/packaging-strategy.md</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://deckx-project.github.io/docs/packaging-strategy.md" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://deckx-project.github.io/ko/docs/packaging-strategy.md" />

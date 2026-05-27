@@ -83,7 +83,7 @@ my-talk.deckx
 - `schemaVersion`: required. 현재 초안은 `deckx.deck.v1`.
 - `id`: required. 영문 소문자, 숫자, `-` 권장. 발표 파일의 안정 ID.
 - `title`: required. 랜딩/발표자뷰에 표시되는 제목.
-- `aspectRatio`: required. `"16:9"`, `"4:3"`, 또는 `{ "width": 1280, "height": 720 }`.
+- `aspectRatio`: required. `"16:9"`, `"4:3"`, 또는 `{ "width": 1920, "height": 1080 }` 같은 custom canvas.
 - `durationSec`: optional. 전체 발표 목표 시간.
 - `theme.css`: optional. 덱 전용 CSS 경로.
 - `metadata`: optional. 검색, 라이브러리, 업로드, 샘플 카탈로그에서 사용할 표준 설명 정보.
@@ -113,6 +113,12 @@ Slide fields:
 - `className`: optional. slide root에 붙일 클래스.
 - `footer`: optional. slide footer.
 
+## Canvas Contract
+
+`aspectRatio`는 단순 비율이 아니라 player canvas 계약이다. 기본 `"16:9"` canvas는 `1280x720`, `"4:3"` canvas는 `1024x768`이다. 덱을 고정 `1920x1080` 좌표계로 작성했다면 `{ "width": 1920, "height": 1080 }`을 선언하거나, 실제 slide container를 기준으로 scale되는 package-local `1920x1080` inner canvas를 둔다.
+
+같은 slide는 fullscreen slideshow뿐 아니라 presenter preview, thumbnail, mobile stage 같은 서로 다른 host box 안에 들어간다. 고정 slide layout은 선언된 canvas px 또는 container query를 기준으로 만들고, viewport unit이나 `window.innerWidth`/`window.innerHeight`에 의존하지 않는다.
+
 ## Slide HTML Contract
 
 일반 DeckX slide HTML은 fragment다. 전체 `html`, `head`, `body`, `script` 태그를 넣지 않는다.
@@ -138,9 +144,20 @@ Slide fields:
 - 절대 파일 경로
 - 발표자 노트를 slide HTML 안에 숨겨 넣는 방식
 
+DeckX는 HTML fragment 외의 별도 slide schema를 강제하지 않는다. 하지만 기본 작성 경로는 pattern-first다. markup을 쓰기 전에 `one-message`, `assertion-evidence`, `comparison`, `timeline`, `chart-focus`, `quote`, `code-focus` 같은 pattern을 고른다. `examples/deckx-pattern-library`는 package format을 바꾸지 않고 안전한 기본 구조를 보여주는 reference sample이다.
+
+## CSS Ownership
+
+플레이어는 runtime frame selector와 `deckx-slide`, `deckx-slide-page`, `deckx-default-*` 같은 `deckx-*` class만 소유한다. Package HTML은 그 외 영역에서 작성자가 소유한다. 플레이어는 `slide`, `slide-body`, `content`, `card` 같은 흔한 작성자 class나 `li` 같은 semantic tag를 임의로 스타일링하지 않는다. 기본 slide template 스타일은 플레이어가 생성한 default slide에만 적용한다.
+
+Package CSS는 보통 manifest에서 파생되는 `deckx-package-<deck-id>` root class나 slide fragment 내부의 고유 class로 scope를 잡는다. `.presenter`, `.slideshow-stage`, `.topbar`, `body`, global control처럼 player runtime surface를 스타일링하지 않는다.
+
 ## Asset Paths
 
-- 모든 경로는 `manifest.json` 위치 기준 상대 경로다.
+- `manifest.json`의 `source`, `notes`, `theme.css`, `metadata.thumbnail` 경로는 `manifest.json` 위치 기준 상대 경로다.
+- slide HTML과 CSS 안의 asset 경로는 해당 HTML/CSS 파일 기준 상대 경로를 쓸 수 있다. 예: `../assets/hero.png`
+- package root 기준 asset 경로도 쓸 수 있다. 예: `assets/hero.png`, `/assets/hero.png`
+- 같은 경로가 slide-local 위치와 package root에 모두 있으면 HTML/CSS 파일 기준 상대 경로를 우선한다.
 - `../`로 package 밖을 참조하지 않는다.
 - 파일명은 ASCII, lowercase, hyphen-case를 권장한다.
 - 큰 video/audio는 post-MVP 범위다. 현재는 이미지/SVG 중심으로 둔다.
@@ -158,7 +175,7 @@ Slide fields:
 
 주의:
 
-- runtime class인 `.presenter`, `.slideshow-stage`, `.topbar` 등을 직접 override하지 않는다.
+- runtime class인 `.presenter`, `.slideshow-stage`, `.topbar`, `deckx-*` 등을 직접 override하지 않는다.
 - 자동 반복 애니메이션은 발표자가 motion pause/reduced를 걸 수 있어야 한다.
 - 텍스트가 캔버스 밖으로 overflow되지 않아야 한다.
 

@@ -26,7 +26,7 @@ DeckX Player는 public URL 또는 local zip에서 `.deckx` package를 엽니다.
 - 현재 슬라이드, 다음 슬라이드, speaker notes, timer, pacing context를 포함한 presenter view.
 - 관객 화면용 slideshow view.
 - Full, Reduced, Paused motion controls.
-- 공식 sample decks.
+- content language 기준으로 나눈 공식 sample decks. pattern-first authoring, 영문/한국어 개발자 샘플, 정적 설명, motion, 4:3 canvas, image-heavy, 자연스러운 long-deck 검증 샘플을 포함합니다.
 
 ## DeckX Package Structure
 
@@ -53,6 +53,7 @@ my-talk/
 
 - DeckX Package spec: https://deckx-project.github.io/ko/docs/deckx-package.md
 - Agent Deck Authoring Guide: https://deckx-project.github.io/ko/docs/agent-deck-authoring.md
+- DeckX Samples: https://deckx-project.github.io/docs/samples.md
 - Packaging Strategy: https://deckx-project.github.io/ko/docs/packaging-strategy.md
 - MCP Strategy: https://deckx-project.github.io/ko/docs/mcp-strategy.md
 - Manifest Schema: https://deckx-project.github.io/docs/deckx-manifest.schema.json
@@ -65,4 +66,30 @@ MCP와 skill 방향은 검토 중입니다. DeckX authoring skill, validation sc
 
 - https://github.com/deckx-project/deckx-starter-basic
 
-packaged starter deck 공개는 별도 세션에서 진행 중이므로 이번 랜딩에서는 repo 링크만 제공합니다.
+packaged starter deck은 starter 흐름을 미리 확인하는 official sample로 제공합니다.
+
+## 공식 샘플
+
+- DeckX starter: https://deckx-project.github.io/player?deck=/decks/starter-basic.deckx#landing
+- Pattern library: https://deckx-project.github.io/player?deck=/decks/pattern-library.deckx#landing
+- English developer sample: https://deckx-project.github.io/player?deck=/decks/sample-en.deckx#landing
+- Korean developer sample: https://deckx-project.github.io/player?deck=/decks/sample-ko.deckx#landing
+- Korean layout templates: https://deckx-project.github.io/player?deck=/decks/template-ko.deckx#landing
+- DeckX zip demo: https://deckx-project.github.io/player?deck=/decks/deckx-player-demo.deckx#landing
+- Static framework demo: https://deckx-project.github.io/player?deck=/decks/static-demo.deckx#landing
+- Motion graphics demo: https://deckx-project.github.io/player?deck=/decks/motion-demo.deckx#landing
+  - staged reveal, morph comparison, motion path flow, kinetic typography, data transition page를 포함합니다.
+- Classic 4:3 demo: https://deckx-project.github.io/player?deck=/decks/classic-4x3-demo.deckx#landing
+- Image-heavy demo: https://deckx-project.github.io/player?deck=/decks/image-heavy-demo.deckx#landing
+- Release runbook long deck: https://deckx-project.github.io/player?deck=/decks/long-120-demo.deckx#landing
+- System snapshot image deck: https://deckx-project.github.io/player?deck=/decks/long-image-demo.deckx#landing
+
+## 권장 Agent Workflow
+
+1. DeckX Package spec과 manifest schema를 읽는다.
+2. HTML을 쓰기 전에 outline과 slide pattern을 정한다.
+3. `manifest.json`, `slides/`, `notes/`, `styles/`, `assets/` source folder를 만든다.
+4. Safe Deck은 script와 inline event handler를 넣지 않는다.
+5. manifest, slide path, asset path, notes coverage, visual overflow를 검증한다.
+6. 폴더를 `.deckx`로 package한다.
+7. `/player?deck=<url>#landing`으로 열고 preview, presenter view, slideshow view를 확인한다.

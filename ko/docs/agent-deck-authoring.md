@@ -37,11 +37,28 @@ deck-folder/
 1. 발표 목적과 청중을 3문장 이내로 정리한다.
 2. 전체 발표 시간을 정하고 slide count를 역산한다.
 3. 각 slide에 `id`, `title`, `timingSec`, 핵심 메시지 1개를 배정한다.
-4. slide HTML은 관객이 보는 시각 정보만 작성한다.
-5. notes Markdown은 발표자가 실제로 말할 문장 중심으로 작성한다.
-6. CSS는 덱 내부 class에만 적용한다.
-7. assets 경로를 manifest 기준 상대 경로로 정리한다.
-8. 검증 체크리스트를 실행한다.
+4. 각 slide에 하나의 pattern을 고른다.
+5. slide HTML은 관객이 보는 시각 정보만 작성한다.
+6. notes Markdown은 발표자가 실제로 말할 문장 중심으로 작성한다.
+7. CSS는 덱 내부 class에만 적용한다.
+8. assets 경로를 manifest 기준 상대 경로로 정리한다.
+9. 검증 체크리스트를 실행한다.
+
+## Pattern-First Authoring
+
+임의 HTML부터 만들지 않는다. 먼저 slide의 역할을 정하고, pattern을 고른 뒤 HTML fragment를 작성한다. 로컬 reference deck은 `examples/deckx-pattern-library`다.
+
+권장 pattern:
+
+- `cover`: 제목, 약속, 맥락.
+- `section`: 새 주제로 넘어가기 전 attention reset.
+- `one-message`: 하나의 결론과 최소한의 근거.
+- `assertion-evidence`: 문장형 주장과 시각적 증거.
+- `comparison`: 균형 잡힌 2-3개 선택지 비교.
+- `timeline`: 3-5개의 이름 붙은 단계.
+- `chart-focus`: 하나의 chart, 하나의 takeaway, 하나의 caption.
+- `quote`: 기억해야 하는 문장 자체가 중요한 slide.
+- `code-focus`: 하나의 code concept과 notes의 보조 설명.
 
 ## Slide 작성 규칙
 
@@ -94,6 +111,10 @@ notes는 발표자의 운영 화면이다.
 
 - 16:9 기본 canvas는 1280x720이다.
 - 4:3 기본 canvas는 1024x768이다.
+- 고정 slide layout은 선언된 canvas px 또는 container query로 맞추고, viewport unit이나 `window.innerWidth`/`window.innerHeight`에 의존하지 않는다.
+- package CSS는 고유 deck class로 scope를 잡고, `slide-body` 같은 player default class나 runtime `deckx-*` class에 의존하지 않는다.
+- slide 하나에는 main message 하나만 둔다.
+- bullet이나 step은 3-5개를 기본 상한으로 보고, 더 필요하면 slide를 나눈다.
 - 텍스트는 캔버스를 벗어나지 않아야 한다.
 - 폰트 크기는 프로젝터에서 읽히는 크기여야 한다.
 - 색 대비가 낮은 조합을 피한다.
@@ -143,6 +164,7 @@ notes는 발표자의 운영 화면이다.
 - 모든 notes 파일이 존재하거나 누락 이유가 있다.
 - slide id 중복이 없다.
 - asset 경로가 package 내부 상대 경로다.
+- 각 slide에 pattern과 main message가 있다.
 - slide HTML에 `<script>`와 inline event handler가 없다.
 - 발표자 노트가 관객용 slide HTML에 노출되지 않는다.
 - 긴 제목/리스트가 canvas를 넘지 않는다.

@@ -32,14 +32,32 @@ Package that folder into a `.deckx` zip after validation.
 ## Recommended Agent Workflow
 
 1. Read the package spec and manifest schema.
-2. Plan the slide sequence before writing HTML.
-3. Create slide fragments under `slides/`.
-4. Write speaker notes under `notes/`.
-5. Keep images and other media under `assets/`.
-6. Connect slides, notes, styles, and metadata through `manifest.json`.
-7. Validate the package.
-8. Open the resulting `.deckx` in DeckX Player.
-9. Check preview, presenter view, slideshow view, notes, and motion controls.
+2. Clarify the audience, purpose, duration, and expected slide count.
+3. Plan the slide sequence before writing HTML.
+4. Choose one slide pattern for every slide.
+5. Create slide fragments under `slides/`.
+6. Write speaker notes under `notes/`.
+7. Keep images and other media under `assets/`.
+8. Connect slides, notes, styles, and metadata through `manifest.json`.
+9. Validate the package.
+10. Open the resulting `.deckx` in DeckX Player.
+11. Check preview, presenter view, slideshow view, notes, and motion controls.
+
+## Pattern-First Authoring
+
+Do not start from arbitrary HTML. Start from the job of the slide, choose a pattern, then write the HTML fragment. Use `examples/deckx-pattern-library` as the local reference deck.
+
+Recommended patterns:
+
+- `cover`: title, promise, and context.
+- `section`: reset attention before a new topic.
+- `one-message`: one conclusion with minimal support.
+- `assertion-evidence`: a sentence claim plus visual proof.
+- `comparison`: two or three balanced alternatives.
+- `timeline`: three to five named steps.
+- `chart-focus`: one chart, one takeaway, one caption.
+- `quote`: memorable phrasing with minimal context.
+- `code-focus`: one code concept with notes for setup and caveats.
 
 ## Slide Rules
 
@@ -48,7 +66,13 @@ Package that folder into a `.deckx` zip after validation.
 - Keep external dependencies out of Safe Decks.
 - Use package-local assets.
 - Design for the declared aspect ratio.
+- Use the declared canvas pixels or container queries for fixed slide layouts; do not size slide content from viewport units or `window.innerWidth`/`window.innerHeight`.
+- Scope package CSS to a unique deck class; do not rely on player default classes such as `slide-body`, and do not style runtime `deckx-*` classes.
 - Avoid text overflow and tiny unreadable type.
+- Keep one main message per slide.
+- Prefer three to five bullets or steps; split the slide when it needs more.
+- Use speaker notes for setup, caveats, and transitions instead of crowding the audience slide.
+- Keep text/background contrast high enough for projector use.
 
 ## Notes Rules
 
@@ -83,6 +107,7 @@ Before marking the deck complete, confirm:
 - Speaker notes are linked where expected.
 - Asset references resolve inside the package.
 - Slides do not include scripts or inline event handlers.
+- Every slide has a declared pattern and one main message.
 - The deck opens in DeckX Player.
 - Presenter view and slideshow view both render correctly.
 
