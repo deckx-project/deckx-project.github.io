@@ -50,11 +50,13 @@
     <link rel="manifest" href="/site.webmanifest" />
     <title>DeckX Player | AI-native HTML Presentation Runtime</title>
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "wwp7u25012");
+      if (window.location.hostname === "deckx-project.github.io") {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wwp7u25012");
+      }
     </script>
     <script type="application/ld+json">
       {
@@ -141,7 +143,7 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/main-TCePo9F2.js"></script>
+    <script type="module" crossorigin src="/assets/main-CdRb7j__.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/main-COouToHF.css">
   </head>
   <body data-page="project">
